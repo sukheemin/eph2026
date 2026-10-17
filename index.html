@@ -80,6 +80,12 @@ blockquote .en { font-size: var(--step-1); font-weight: 700; font-style: italic;
 blockquote .ctx { color: var(--ink); }
 .label { font-weight: 700; color: var(--accent); }
 
+/* video */
+video.talk { width: 100%; height: auto; border-radius: 10px; background: #181818; display: block; }
+details.transcript { border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1.1rem; }
+details.transcript summary { font-weight: 700; color: var(--accent); cursor: pointer; }
+details.transcript div { display: grid; gap: 0.75rem; margin-top: 0.75rem; }
+details.transcript p { margin: 0; }
 /* video placeholder */
 .pending { border: 2px dashed var(--line); border-radius: 10px; padding: 1.25rem; color: var(--muted); }
 
@@ -139,7 +145,23 @@ footer { color: var(--muted); font-size: 0.95rem; border-top: 1px solid var(--li
 
     <section aria-labelledby="video-h">
       <h2 id="video-h">This poster in 3 minutes</h2>
-      <p class="pending">The 3-minute video and its full transcript will be added here before the conference (11–13 November 2026).</p>
+      <video class="talk" controls preload="metadata" playsinline aria-describedby="transcript-note">
+        <source src="eph2026_3min.mp4" type="video/mp4">
+        Your browser cannot play this video. <a href="eph2026_3min.mp4">Download the video (MP4)</a>.
+      </video>
+      <p id="transcript-note" class="status">Narrated by Sukhee Min · 3 min 57 s · captions are built into the video. The full transcript is below.</p>
+      <details class="transcript">
+        <summary>Read the full transcript</summary>
+        <div>
+          <p>This research began the day I dropped my ID card on campus, alone, and used generative AI, or GenAI, to find it, a use most people never imagine. GenAI is usually discussed as a productivity tool. Our study asks a different question: what does it mean for the everyday independence and dignity of people with visual impairments?</p>
+          <p>We held three online, audio-only focus group interviews with seven South Korean university students with severe visual impairment. Six were totally blind, and one had low vision. We used Braun and Clarke's reflexive thematic analysis, and three lenses: Sen and Nussbaum's Capability Approach, on what people can actually do and be; Zimmerman's empowerment theory, on how reduced dependency translates into self-efficacy and perceived control; and Jacobson's distinction between inherent human dignity and social dignity.</p>
+          <p>Four themes were identified. First, and notably, GenAI removed what we term the relational cost of help-seeking: the psychological indebtedness, privacy exposure and temporal dependency of relying on sighted others for visual information. As one participant said, "Before, I used to video-call sighted people — 'Mum, can you look at this for me? Mum, help me with this.'"</p>
+          <p>Second, participants crossed what we call the threshold of the impossible. One totally blind participant travelled to Japan with a totally blind friend, without a sighted companion, using GenAI to read and translate Japanese signs on the streets. He described it as overcoming a "double disability", and said, "It was a whole new world."</p>
+          <p>Third, and to me especially striking, participants negotiated their disability identity within AI interaction itself. Because AI cannot see impairment, disability disclosure becomes a deliberate choice. Some disclosed their disability strategically for better outputs; one even built a one-keystroke switch to an accessibility mode. Others did not. In one participant's words, "I would rather it simply treats me as it would anyone else, without any special consideration." The fatigue of disclosing disability in everyday life extends into human–AI interaction.</p>
+          <p>Fourth, these experiences converged into a profound sense of restored human dignity. One participant once ate bread that might have gone mouldy, because she could not verify food safety. Now she photographs food and asks GenAI. She told us, "I really do feel like I've become a person." This is not a story of technological convenience, but of restoring the conditions to live as a complete human subject. This dignity also had its boundaries. Participants stayed self-critical: one warned that overdependence "would actually become a great poison."</p>
+          <p>This study shifts the analytic lens from GenAI's functional utility to its relational and existential significance. It identifies disability self-disclosure to AI as a new site of identity negotiation. And it brings voices from South Korea into a predominantly Western literature. Our findings reconceptualise GenAI not only as an assistive tool, but also as a sociotechnical infrastructure that reshapes the relational, experiential and existential conditions of independent living for people with visual impairments. Thank you.</p>
+        </div>
+      </details>
     </section>
 
     <section aria-labelledby="about-h">
